@@ -1,4 +1,4 @@
-let correctAnswer = Math.floor(Math.random() * 10 + 1);
+let correctAnswer = Math.floor(Math.random() * 10) + 1;
 let guesses = 0;
 
 document.getElementById("submitBtn").onclick = function () {
@@ -7,7 +7,7 @@ document.getElementById("submitBtn").onclick = function () {
 
   if (guessValue == correctAnswer) {
     alert(`${correctAnswer} is correct! It took you ${guesses} guess(es)`);
-    correctAnswer = Math.floor(Math.random() * 10 + 1);
+    correctAnswer = Math.floor(Math.random() * 10) + 1;
     guesses = 0;
   } else if (guessValue < correctAnswer && guessValue > 0) {
     alert(`Higher! ${guesses} guess(es)`);
